@@ -1,0 +1,105 @@
+<div class="blog_font">
+<br class="break" />
+
+<p class="blog_body">I was recently inspired by <a target="_newtab"
+href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2735096/">a computational genomics paper</a> published in
+<i>Nature</i>, where given a data set of European individuals and their
+genomes, the researchers could use a technique called Principle Components
+Analysis (PCA) to reconstruct a map of Europe.</p>
+
+
+<p class="blog_body">Purely for fun, my question was whether we could 
+reconstruct similar “maps,”
+but of literary texts instead of human individuals.</p>
+
+
+<p class="blog_body"><b>What is PCA?</b></p>
+
+
+<p class="blog_body">First, a little bit about PCA.  I like to think of PCA as a way
+of understanding a group with a diverse set of members (whether those “members”
+are actual human individuals, or image files, or Shakespeare plays).  Members
+can be similar or different from each other according to many different factors;
+for example, two people can have different eye color, hair color, and age, but
+maybe they have the same weight.  PCA is a way to find the factors that most
+explain the variation within a group by calculating the “principle components”
+of a group. The first principle component is associated with the factor(s) that
+explains most of the variation in a group.  The second principle component
+explains the most variation in the group after accounting for the variation
+caused by the first principle component. And so on.</p>
+
+
+<p class="blog_body">So, if you plot members of the group as dots on a
+2-dimensional graph using the first two principle components to spread out the dots,
+you can construct a “map” of the group like the map in the paper above.</p>
+
+
+<p class="blog_body"><b>PCA Map of Shakespeare’s Plays</b></p>
+
+
+<p class="blog_body">Instead of human genomes, I tried using PCA to construct a
+map of Shakespeare’s plays using <a target="_newtab"
+href="http://winedarksea.org/?attachment_id=2227">data from the Folger
+Shakespeare library</a>.  The metrics I used to distinguish one play from
+another were the frequencies of all the words in each play.  It turns out that
+when we represent each play as a point on the graph and use PCA to cluster
+similar plays together, they tend to group according to the three genres
+traditionally associated with Shakespeare’s plays: history, comedy, and
+tragedy.</p>
+
+
+<p class="blog_body">Here is the plot of the top two principal components for
+Shakespeare plays:</p>
+
+
+<p class="blog_body"><img border=0 width="100%" src="posts/post1.png"></p>
+
+<p class="blog_body">Interesting to consider in the above graph are the so-called
+“problem plays,” or plays that are difficult to characterize as fully comic or
+fully tragic.  Most of such plays are also placed on the border between comedy
+and tragedy, including <i>All’s Well That Ends Well</i>, <i>Measure for Measure</i>,
+<i>Merchant of Venice</i>, <i>The Winter’s Tale </i>and <i>Two Noble Kinsmen</i>
+(a Shakespeare collaboration with playwright John Fletcher).</p>
+
+
+<p class="blog_body"><b>The Comic Potential of <i>Romeo and Juliet</i></b></p>
+
+
+<p class="blog_body">I am especially interested, however, in the plays that may
+not be considered as “problematic” as those above, but that are still closely
+clustered with many plays of a different genre.  For example, the famous
+tragedy <i>Romeo and Juliet</i> is clustered alongside comedies like <i>Love’s
+Labour’s Lost</i> and <i>A Midsummer Night’s Dream</i>.  In a recent lecture I
+attended by Shakespeare scholar Stephen Orgel, he described <i>Romeo and Juliet</i>
+as a tragedy that constantly tempts us with a comic ending.  It seems as if all
+this temptation was enough to fool PCA.</p>
+
+
+<p class="blog_body">A nice thing about PCA is that it is somewhat interpretable,
+especially with the way our model is constructed.  More specifically, we can
+see the words that are highly correlated with the two principle components.  It
+turns out that, for the first principle component, the strongest associations
+are with the words are “arms” (as in weapons) and “allegiance.”  For the second
+principle component, the most important word is “love.”&nbsp; So much of the generic
+variance in Shakespeare plays can be explained by love and war!</p>
+
+
+<p class="blog_body"><i>Romeo and Juliet</i> is classified as a comedy because
+words like “love” show up with such high frequency in the play.  This supports
+Orgel’s claim about the comic potential of <i>Romeo and Juliet</i>; whenever there
+is a similar level of “love” in another Shakespeare play, that play ends in a
+happy marriage.  Only in <i>Romeo and Juliet</i> does Shakespeare devote so
+much time developing a (successful) marriage plot before forcing the play in a
+tragic direction.  It almost seems as if a Shakespeare play is allowed to
+continue beyond a marriage, tragedy will inevitably ensue.</p>
+
+<p class="blog_body"><b>Beyond Genre</b></p>
+
+<p class="blog_body">Still, a relatively simple model like PCA on word frequencies
+does remarkably well at clustering most plays according to genre.  It would be
+absurd to think that Shakespeare’s oeuvre can be reduced to words like “love”
+and “war,” and so based on these results, it should seem equally absurd to
+think of Shakespeare’s plays as being classified as a single genre.  Perhaps
+when teaching and thinking about any play, we should actively try to reason
+beyond the traditional notion of genre.</p>
+</div>

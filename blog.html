@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+    
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="brianhie.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300italic,300"
+rel="stylesheet" type="text/css">
+
+<script src="jquery-3.1.0.min.js"></script> 
+<script> 
+$(function(){
+    var numPosts = 5;
+    for (var i = 1; i <= numPosts; i++) {
+        $("#post" + i.toString()).load("posts/post" + i.toString() + ".html");
+    }
+});
+</script> 
+</head>
+
+<body style="margin: 0;">
+<div class="title_menu">
+<p class="title title_font">
+    all coherence gone
+</p>
+<p class="subtitle title_font">
+    a blog of computing, statistics, and literature by
+    <a class="brianhie_link" href="/brianhie.html">Brian Hie</a>
+</p>
+</div>
+
+<div class="blog_posts">
+
+<button class="accordion">
+<p class="blog_header sans_font">Mapping early modern social networks</p>
+<p class="blog_date title_font">1 June 2016</p>
+</button>
+<div class="panel" id="post5"></div>
+<br class=break /><hr ><br class=break />
+
+<button class="accordion">
+<p class="blog_header sans_font">A new schema for <i>Ulysses</i></p>
+<p class="blog_date title_font">12 February 2015</p>
+</button>
+<div class="panel" id="post3"></div>
+<br class=break /><hr ><br class=break />
+
+<button class="accordion">
+<p class="blog_header sans_font">More PCA: The <i>King James Bible</i> </p>
+<p class="blog_date title_font">20 October 2014</p>
+</button>
+<div class="panel" id="post2"></div>
+<br class=break /><hr ><br class=break />
+
+<button class="accordion">
+<p class="blog_header sans_font">In love and war: Shakespeare and PCA</p>
+<p class="blog_date title_font">16 October 2014</p>
+</button>
+<div class="panel" id="post1"></div>
+<br class=break /><hr ><br class=break />
+
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
+</script>
+
+</body>
+</html>

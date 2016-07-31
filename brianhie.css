@@ -1,0 +1,166 @@
+.home_menu {
+    height: 300px;
+    width: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -180px 0 0 -240px;
+}
+
+.home_title {
+    text-align: center;
+    font-size: 60px;
+    margin: 0 0 30px 0;
+    padding: 50px 0 50px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+
+.title_menu {
+    background-color: #ccc;
+    background-image: url("HSDeath.jpg");
+    background-size: 100%;
+    margin: 0;
+    padding: 80px 0 70px 0;
+}
+
+.title_font {
+    font-family: "Baskerville Old Face", Baskerville, Palatino, "Palatino Linotype", serif;
+}
+
+.blog_font {
+    font-family: "Merriweather", "Cambria", "Palatino Linotype", Palatino, "Times New Roman", serif;
+    font-weight: lighter;
+}
+
+.sans_font {
+    font-family: "Gill Sans MT", "Gill Sans", Arial, Helvetica, sans-serif;
+}
+
+.subtitle {
+    text-align: center;
+    padding-left: 25%;
+    font-size: 22px;
+    margin: 0;
+    color: #444;
+    line-height: 160%;
+}
+
+.blog_posts {
+    padding: 0 25% 0 25%;
+    margin: 50px 0 0 0;
+}
+
+.blog_header {
+    font-size: 35px;
+    margin: 0;
+}
+
+.blog_date {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+    color: #777;
+}
+
+.blog_body {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    text-align: justify;
+    line-height: 180%;
+    color: #555;
+}
+
+.block_quotation {
+    font-size: 14px;
+    margin: 0 0 30px 0;
+    padding: 30px;
+    background-color: #eee;
+    color: #555;
+}
+
+.quotation {
+    margin: 0;
+}
+
+.nav {
+    border: none;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav li {
+    display:inline;
+}
+
+.nav a {
+    display:inline-block;
+    padding: 10px 30px 10px 30px; /* top right bottom left */
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+}
+
+.brianhie_link {
+    padding: 10px;
+    text-decoration: none;
+    color: #222;
+    background-color: #FFCEAA;
+    transition: 0.2s;
+}
+
+.brianhie_link:hover {
+    background-color: #D4976A;
+}
+
+.break {
+    margin: 20px 0 0 0;
+}
+
+hr {
+    width: 80%;
+    height:1px;
+    background: #ccc
+}
+
+ /* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #ddd;
+    color: #444;
+    cursor: pointer;
+    padding: 18px 20px 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #bbb;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 100000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
