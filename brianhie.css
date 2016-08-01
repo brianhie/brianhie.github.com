@@ -93,6 +93,10 @@
     margin: 0;
 }
 
+.edit {
+    font-size: 14px;
+}
+
 .nav {
     border: none;
     list-style:none;
