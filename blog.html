@@ -11,7 +11,7 @@ rel="stylesheet" type="text/css">
 <script> 
 $(function(){
     var numPosts = 5;
-    for (var i = 1; i <= numPosts; i++) {
+    for (var i = 0; i <= numPosts; i++) {
         $("#post" + i.toString()).load("posts/post" + i.toString() + ".html");
     }
 });
@@ -65,6 +65,13 @@ $(function(){
 <p class="blog_date title_font">16 October 2014</p>
 </button>
 <div class="panel" id="post1"></div>
+<br class=break /><hr ><br class=break />
+
+<button class="accordion">
+<p class="blog_header sans_font">Welcome to &ldquo;all coherence gone&rdquo;</p>
+<p class="blog_date title_font">16 October 2014</p>
+</button>
+<div class="panel" id="post0"></div>
 <br class=break /><hr ><br class=break />
 
 </div>
