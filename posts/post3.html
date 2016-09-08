@@ -232,3 +232,238 @@ without the aid of a schema, might feel like a newcomer placed in the middle of
 New York City, without a map.</p>
 
 </div>
+=======
+<div class="blog_font">
+<br class="break" />
+
+<p class="blog_body edit"><b>Edit (2 March 2015):</b> <i>A friend recently directed me
+toward <a target="_newtab" href="http://rep.ucpress.edu/content/127/1/1">this article</a>
+which asks the literal question, &ldquo;Why is James Joyce&rsquo;s <i>Ulysses</i>
+as long as it is?&rdquo; There are also 
+<a target="_newtab" href="http://www.representations.org/three-responses-to-ulysses-by-numbers/">
+some very interesting responses</a> to this article and how quantitative methods
+can be used to address questions in literary criticism.</i></p>
+
+<p class="blog_body">I&rsquo;ve recently been rereading <i>Ulysses</i> by James Joyce
+and have been inspired with a computational question. <i>Ulysses</i> is a book
+that is often read alongside a lot of supplementary material, whether due to
+the novel&rsquo;s difficulty, or perhaps simply because of the enormous amount of supplementary
+material claiming to be the authoritative guide to the novel.</p>
+
+
+<p class="blog_body">Joyce himself seemed to fall into the trap of feeling the
+need to provide a guide to his novel. On <a target="_newtab"
+href="https://en.wikipedia.org/wiki/Linati_schema_for_Ulysses">two</a> <a target="_newtab"
+href="https://en.wikipedia.org/wiki/Gilbert_schema_for_Ulysses">separate</a> occasions,
+he offered neat tables associating each of the eighteen episodes with various characters
+or places from Homer&rsquo;s <i>Odyssey</i>, with different colors, with times of the
+day, and even with human organs.</p>
+
+
+<p class="blog_body">Here is an image of the Gilbert Schema, sent from Joyce to
+his friend Stuart Gilbert:</p>
+
+<p class="blog_body"><img width="100%" src="posts/post3_gilbert.jpg" /></p>
+
+
+<p class="blog_body">The question is, then, how well does a computer do at
+creating a schema for <i>Ulysses</i>?</p>
+
+
+<p class="blog_body">If we follow Joyce&rsquo;s model for schematizing, there are some
+ideal characteristics we&rsquo;d like to have. The first is understanding <i>Ulysses</i>
+at an episode resolution. Ideally, we would be able to reduce each episode to
+a single word that not only summarizes the episode in some way, but that also distinguishes
+that episode from the other seventeen. There are a number of computational
+tools available for detecting important keywords in a text, but for this
+problem, I settled on something called the hypergeometric test.</p>
+
+
+<p class="blog_body"><b>Why hypergeometric?</b></p>
+
+
+<p class="blog_body">To visualize what a hypergeometric test does, consider a
+ball pit with a thousand balls, where only ten balls in the pit are painted
+red. Say your friend gives you a sample of twenty balls from the pit. You
+look in the sample and find nine red balls. You&rsquo;d suspect, since there were so
+few red balls in the pit (only ten in thousand), that your friend has
+deliberately preferred the color red when sampling balls. The number of red
+balls in your friend&rsquo;s sample seems a lot more than would be expected if you
+drew ten balls by chance. A hypergeometric test is a statistical method to
+confirm this intuition. Simply put, a hypergeometric test can be used to determine
+if a sub-population is overrepresented, or underrepresented, in a given sample
+of the entire population.</p>
+
+
+<p class="blog_body">We can think of <i>Ulysses</i> as a bag of words, where each
+episode is a different (nonrandom) sample of those words. Words that are more
+important to a given episode will be overrepresented. Using a hypergeometric
+test, we can get an overrepresentation score for each word of each episode of <i>Ulysses</i>.
+A hypergeometric test works well since we are not only getting important words
+for a given episode, but also words that distinguish an episode from the rest
+of <i>Ulysses</i>.</p>
+
+
+<p class="blog_body">Something important to consider is that these hypergeometric
+tests are not independent, since overrepresentation of a word in one episode
+will necessarily involve underrepresentation in other episodes. Still, we can
+take into account the many, non-independent hypergeometric tests we are doing
+to determine all the words in each episode that are significantly
+overrepresented. And to create our schema, we can simply pick the word that is
+the most overrepresented in each episode, according to the hypergeometric test
+score.</p>
+
+
+<p class="blog_body"><b>Introducing the Hie Schema</b></p>
+
+
+<p class="blog_body">So, how well did the computer do? It seems remarkably well,
+making a lot of interesting choices. Below are a few columns from the Gilbert
+Schema, with the final column coming from the computer&rsquo;s schema (which I have
+taken the opportunity to name after myself):</p>
+
+
+<p class="blog_body"><img border=0 width="100%"
+src="posts/post3_hie_schema.jpg"></p>
+
+
+<p class="blog_body">All of the words in the Hie Schema are significantly
+overrepresented within their corresponding episodes. Many of the words picked
+out by the hypergeometric test are also in the Gilbert Schema: &ldquo;tower,&rdquo; &ldquo;kidney,&rdquo;
+and &ldquo;editor.&rdquo; There are also some that make a lot of sense, like the word &ldquo;sand&rdquo;
+being associated with the famous Proteus episode, where Stephen Daedalus walks
+along Sandymount Strand, &ldquo;sandwich&rdquo; being associated with the Lestrygonians
+episode, where Leopold Bloom has a gorgonzola cheese sandwich and a glass of
+burgundy for lunch, and &ldquo;miss&rdquo; representing the Sirens episode.</p>
+
+
+<p class="blog_body"><b>A Humanistic Catechism</b></p>
+
+
+<p class="blog_body">The two most interesting words, though, are those of the
+last two episodes. The penultimate episode is the mock catechism, that was supposedly
+Joyce&rsquo;s favorite. The most overrepresented word here is &ldquo;human.&rdquo; A quick
+search through uses of the word &ldquo;human&rdquo; in this episode reveal that the
+catechism&rsquo;s questions and answers are highly preoccupied with corporal and
+carnal matters:</p>
+
+<div class="block_quotation">
+<p class="quotation">&hellip;the parts of the <b>human</b> anatomy most sensitive to
+cold being the nape&hellip;</p>
+
+<p class="quotation">&hellip;he was reluctant to shed <b>human</b> blood even when the
+end justified the means&hellip;</p>
+
+<p class="quotation">&hellip;consequent extermination of the <b>human</b> species,
+inevitable but impredictable&hellip;</p>
+
+<p class="quotation">&hellip;of the universe of <b>human</b> serum constellated with red
+and white bodies&hellip;</p>
+
+<p class="quotation">&hellip;the <b>human</b> organism, normally capable of sustaining
+an atmospheric pressure of 19 tons&hellip;</p>
+
+<p class="quotation">&hellip;fells of sewer rodents, <b>human</b> excrement possessing
+chemical properties&hellip;</p>
+
+<p class="quotation">&hellip;the 70 years of complete <b>human</b> life at least 2/7ths,
+viz., 20 years passed in sleep&hellip;</p>
+</div>
+
+<p class="blog_body">And in one particularly dense question:</p>
+
+<div class="block_quotation">
+<p>He believed then that <b>human</b> life was infinitely perfectible,
+eliminating these conditions?<br></p>
+<p>There remained the generic conditions imposed by natural, as distinct from <b>human</b>
+law, as integral parts of the <b>human</b> whole: the necessity of destruction
+to procure alimentary sustenance: the painful character of the ultimate
+functions of separate existence, the agonies of birth and death: the monotonous
+menstruation of simian and (particularly) <b>human</b> females extending from
+the age of puberty to the menopause: inevitable accidents at sea, in mines and
+factories: certain very painful maladies and their resultant surgical
+operations, innate lunacy and congenital criminality, decimating epidemics:
+catastrophic cataclysms which make terror the basis of <b>human</b> mentality:
+seismic upheavals the epicentres of which are located in densely populated
+regions: the fact of vital growth, through convulsions of metamorphosis from
+infancy through maturity to decay.</p>
+</div>
+
+<p class="blog_body">In Joyce&rsquo;s catechism, the world is mediated not through the
+language of the divine or the unseen, but rather through the physical, the
+bodily, and specifically the human. The catechism becomes comic but also
+deeply subversive by elevating a normal human, like Leopold Bloom, to the dogmatism
+and stylistic seriousness often only reserved for subjects of eternal significance.</p>
+
+
+<p class="blog_body"><b>Molly Bloom and Valley Girl Stylistics</b></p>
+
+
+<p class="blog_body">Molly Bloom&rsquo;s monologue at the end of <i>Ulysses</i> is
+represented by a different word: &ldquo;like.&rdquo; Once again, looking at the uses of
+the word &ldquo;like&rdquo; reveals an important stylistic mechanism specific to Molly&rsquo;s version
+of stream of consciousness, as opposed to Stephen&rsquo;s or Leopold&rsquo;s. (Try it
+yourself! Go to a digital version of <i>Ulysses</i> like <a target="_newtab"
+href="http://www.online-literature.com/james_joyce/ulysses/18/">this one</a>
+and CTRL-F for instances of &ldquo;like.&rdquo;)</p>
+
+
+<p class="blog_body">In Stephen&rsquo;s monologue, for example, the &ldquo;stream&rdquo; of
+consciousness is more like a chain of individual thoughts, each separated from
+the other by a comma or by a period. Molly&rsquo;s monologue is different; it works
+more like an actual stream, consisting of phrases joined together by the word &ldquo;like&rdquo;
+(instead of another work like &ldquo;and&rdquo;), forming a stream of <i>associations</i> and smoothing
+out the monologue into very long syntactic units.</p>
+
+
+<p class="blog_body">These stylistic differences unique to Molly are
+representative of the way Joyce genders his characters&rsquo; thought. Stephen and
+Leopold think with a throbbing, rhythmic firmness; Molly thinks with a flowing,
+windy passivity.</p>
+
+
+<p class="blog_body"><b>What&rsquo;s the use of schemas?</b></p>
+
+
+<p class="blog_body">Finally, a few words about schematizing <i>Ulysses</i>. I
+tend to agree with the criticisms that such schemas oversimplify the novel to a
+few words or set up spurious comparisons to Homer&rsquo;s epic. However, the popularity
+of schemas, as well as heavily annotated versions of <i>Ulysses</i>,<i> </i>is
+something worth thinking about.</p>
+
+
+<p class="blog_body">One way of understanding <i>Ulysses</i>, and the 
+popularity of schemas, is by looking at the
+trends in urbanization during the early twentieth century, during which cities
+became larger and immensely more complicated. For example, here is a map of
+the growth of London between 1840 and 1929:</p>
+
+<p class="blog_body"><img width="100%" src="posts/post3_london.jpg" /></p>
+
+
+<p class="blog_body">Urban sprawl happened more or less organically; block after
+block could be added, making the city seem almost infinitely expandable. The same
+is true for stream of consciousness, especially that of the early Leopold Bloom
+chapters. Joyce would add sentence after sentence, growing the size of these
+chapters and making them seem more and more complex. Reading the stream of
+consciousness in <i>Ulysses</i> would be much like navigating urban sprawl, beginning on the
+broad boulevards of external, conscious stimuli before wandering through narrow
+alleyways of the internal and the subconscious, before emerging suddenly, once
+again, on a wide, open street.</p>
+
+
+<p class="blog_body">Navigating an increasingly complex city required a street
+map, like the one of 1920s Dublin below:</p>
+
+<p class="blog_body"><img width="100%" src="posts/post3_dublin.jpg" /></p>
+
+
+<p class="blog_body">When representing a complex city, such maps necessarily 
+require some amount of simplification. They
+include landmarks that help the city dweller orient him or herself. The same
+function is fulfilled in <i>Ulysses</i> by the schema or the annotated
+guidebook. A first-time reader of <i>Ulysses</i>,
+without the aid of a schema, might feel like a newcomer placed in the middle of
+New York City, without a map.</p>
+
+</div>
