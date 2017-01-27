@@ -151,7 +151,7 @@ button.accordion {
     padding: 18px 20px 18px 20px;
     width: 100%;
     text-align: left;
-    border: none;
+    border: 0px 0px 20px 0px;
     outline: none;
     transition: 0.3s;
 }
