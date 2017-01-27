@@ -1,3 +1,7 @@
+body {
+    background-color: #e9ebee;   
+}
+
 .home_menu {
     height: 300px;
     width: 480px;
@@ -59,6 +63,9 @@
 .blog_posts {
     padding: 0 25% 0 25%;
     margin: 50px 0 0 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
 }
 
 .blog_header {
