@@ -143,7 +143,7 @@ hr {
  /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
     background-color: white;
-    color: #444;
+    color: #607d8b;
     cursor: pointer;
     padding: 20px 32px 20px 32px;
     margin: 0px 0px 20px 0px;
