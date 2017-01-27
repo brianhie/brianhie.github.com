@@ -149,7 +149,7 @@ button.accordion {
     color: #444;
     cursor: pointer;
     padding: 18px 20px 18px 20px;
-    margin-bottom: 20px;
+    margin: 20px 0px 20px 0px;
     width: 100%;
     text-align: left;
     border: none;
@@ -163,7 +163,7 @@ button.accordion.active, button.accordion:hover {
 }
 
 div.panel {
-    padding: 0 18px;
+    padding: 30px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
