@@ -60,7 +60,6 @@
     background-color: #e9ebee;
     width: 50%;
     margin: auto;
-    margin: 50px 0 0 0;
 }
 
 .blog_header {
@@ -81,8 +80,6 @@
     text-align: justify;
     line-height: 180%;
     color: #555;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
 }
 
 .block_quotation {
@@ -173,6 +170,8 @@ div.panel {
     overflow: hidden;
     transition: 0.5s ease-in-out;
     opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
 }
 
 div.panel.show {
