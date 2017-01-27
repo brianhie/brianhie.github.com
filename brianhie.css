@@ -142,7 +142,7 @@ hr {
 
  /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
-    background-color: white;
+    background-color: #eee;
     color: #607d8b;
     cursor: pointer;
     padding: 20px 32px 20px 32px;
@@ -162,13 +162,10 @@ button.accordion.active, button.accordion:hover {
 }
 
 div.panel {
-    background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: 0.5s ease-in-out;
     opacity: 0;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
 }
 
 div.panel.show {
