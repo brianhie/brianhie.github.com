@@ -163,7 +163,6 @@ button.accordion.active, button.accordion:hover {
 }
 
 div.panel {
-    padding: 30px 50px 30px 50px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
