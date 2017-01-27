@@ -121,13 +121,13 @@
 .brianhie_link {
     padding: 10px;
     text-decoration: none;
-    color: #222;
+    color: #ddd;
     background-color: #FFCEAA;
     transition: 0.2s;
 }
 
 .brianhie_link:hover {
-    background-color: #D4976A;
+    background-color: #ccc;
 }
 
 .break {
