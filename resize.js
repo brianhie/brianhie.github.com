@@ -1,5 +1,4 @@
 _width_resize = function(event) {
-    console.log('here');
     var w = window,
     d = document,
     e = d.documentElement,
@@ -9,7 +8,6 @@ _width_resize = function(event) {
     var small = false, medium = false, large = false;
     var head = document.getElementById("main_content");
     if (head) {
-	console.log('here2');
 	if (x < 1000 && !small) {
 	    head.style.maxWidth = "80%";
 	    small = true;
