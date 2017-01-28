@@ -12,6 +12,7 @@
     font-size: 60px;
     margin: 0 0 20px 0;
     padding: 50px 0 50px 0;
+    color: #333;
 }
 
 .home_image {
@@ -25,7 +26,7 @@
     text-align: center;
     font-size: 60px;
     margin: 0;
-    color: #444;
+    color: #222;
 }
 
 .title_menu {
