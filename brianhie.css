@@ -117,8 +117,7 @@
 }
 
 .nav a:hover {
-    background-color: #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    background-color: #eee;
 }
 
 .brianhie_link {
