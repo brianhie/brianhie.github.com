@@ -10,18 +10,18 @@ _width_resize = function(event) {
     var head = document.getElementById("main_content");
     if (head) {
 	console.log('here2');
-	if (x < 1100 && !small) {
+	if (x < 1000 && !small) {
 	    head.style.maxWidth = "80%";
 	    small = true;
 	    medium = false;
 	    large = false;
 	} else if (x < 1500 && !medium) {
-	    head.style.maxWidth = "65%";
+	    head.style.maxWidth = "60%";
 	    small = false;
 	    medium = true;
 	    large = false;
 	} else if (!large) {
-	    head.style.maxWidth = "50%";
+	    head.style.maxWidth = "45%";
 	    small = false;
 	    medium = false;
 	    large = true;
