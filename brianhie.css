@@ -2,6 +2,10 @@ body {
     margin-bottom: 100px;
 }
 
+b {
+    font-weight: 400;
+}
+
 a {
     color: rgb(232, 116, 27);
     text-decoration: none;
@@ -84,7 +88,7 @@ a {
 
 .blog_header {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
