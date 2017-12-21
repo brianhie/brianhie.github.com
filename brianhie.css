@@ -101,6 +101,10 @@ a {
     line-height: 170%;
 }
 
+.blog_body a {
+    font-weight: bold;
+}
+
 .block_quotation {
     font-size: 14px;
     margin: 0 0 30px 0;
