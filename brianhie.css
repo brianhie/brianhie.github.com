@@ -20,25 +20,18 @@ a {
 }
 
 .home_menu {
-    width: 350px;
     margin-right: 50px;
     border-radius: 5px;
 }
 
 .home_title {
-    text-align: center;
-    font-size: 50px;
-    margin: 80px 0 60px 0;
-    padding: 40px 0 40px 0;
-    color: #333;
+    text-align: left;
+    font-size: 140px;
+    margin: 80px 0 30px 0;
+    color: #b3b3b3;
 }
 
 .home_image {
-    background-image: url('westmoreland_blank.jpg');
-    background-size: 100%;
-    background-color: #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #dddddd;
 }
 
 .title {
