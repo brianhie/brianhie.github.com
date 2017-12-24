@@ -97,6 +97,13 @@ a {
 }
 
 .blog_body {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    line-height: 170%;
+    font-weight: 300;    
+}
+
+.home_body {
     font-size: 20px;
     margin: 0 0 30px 0;
     line-height: 170%;
