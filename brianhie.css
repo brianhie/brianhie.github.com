@@ -58,7 +58,7 @@ a {
 }
 
 .title_font {
-    font-family: "Baskerville Old Face", Baskerville, Palatino, "Palatino Linotype", serif;
+    font-family: "Baskerville Old Face", Baskerville, "Libre Baskerville", serif;
 }
 
 .blog_font {
@@ -86,7 +86,7 @@ a {
 .blog_header {
     font-size: 25px;
     font-weight: 400;
-    margin: 0 0 30px 0;
+    margin: 0;
 }
 
 .blog_date {
