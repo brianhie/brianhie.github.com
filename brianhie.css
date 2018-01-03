@@ -30,9 +30,9 @@ a {
 
 .home_title {
     text-align: left;
-    font-size: 140px;
-    margin: 80px 0 0 0;
-    color: #dbdbdb;
+    font-size: 50px;
+    margin: 80px 0 30px 0;
+    color: black;
 }
 
 .home_image {
@@ -58,7 +58,7 @@ a {
 }
 
 .title_font {
-    font-family: "Baskerville Old Face", Baskerville, "Libre Baskerville", serif;
+    font-family: "Roboto Mono", serif;
 }
 
 .blog_font {
