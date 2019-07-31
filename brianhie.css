@@ -68,6 +68,7 @@ a {
 
 .sans_font {
     font-family: "Barlow", "Source Sans Pro", sans-serif;
+    font-weight: 300;
 }
 
 .subtitle {
