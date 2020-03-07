@@ -82,10 +82,18 @@ h4 + p {
 
 .book-cell:nth-child(4n + 3) {
   border-left: 1px;
-  border-right: 1px;
+  border-right: 0px;
   border-style: solid;
   border-color: #cccccc;
 }
+
+.book-cell:nth-child(4n + 4) {
+  border-left: 1px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
 
 @media screen and (max-width: 1500px) {
   .book-cell {
@@ -109,14 +117,16 @@ h4 + p {
 
   .book-cell:nth-child(3n + 2) {
     border-left: 1px;
-    border-right: 1px;
+    border-right: 0px;
     border-style: solid;
     border-color: #cccccc;
   }
   
   .book-cell:nth-child(3n + 3) {
-    border-left: 0px;
+    border-left: 1px;
     border-right: 0px;
+    border-style: solid;
+    border-color: #cccccc;
   }
 }
 
