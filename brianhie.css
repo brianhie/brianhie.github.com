@@ -13,6 +13,11 @@ b {
 a {
     color: rgb(232, 116, 27);
     text-decoration: none;
+	outline: 0;
+}
+
+.pub_link {
+	font-size: 18px;
 }
 
 .container {

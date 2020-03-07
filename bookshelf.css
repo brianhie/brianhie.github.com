@@ -1,0 +1,169 @@
+.header > h3 {
+  color: #F7EE80;
+}
+
+.header-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 80px;
+  font-family: "Cormorant", serif;
+  height: 210px;
+}
+
+.bookshelf-container {
+  display: flex;
+  flex-flow: wrap;
+  max-width: 1500px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.book-cell {
+  width: 24.7%;
+  height: 25rem;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 7%;
+  padding-bottom: 3%;
+}
+
+
+.book-cell > img {
+  width: 50%;
+  border: solid black;
+}
+
+.book-cell > h4 {
+  width: 60%;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+}
+
+.book-cell > p {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+}
+
+h4 + p {
+  margin-top: 0;
+  width: 60%;
+  text-align: center;
+}
+
+.book-cell:nth-child(4n + 1) {
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+.book-cell:nth-child(4n + 2) {
+  border-left: 1px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+.book-cell:nth-child(4n + 3) {
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+@media screen and (max-width: 1500px) {
+  .book-cell {
+    width: 30%;
+    height: 28rem;
+  }
+
+  .book-cell > p {
+    width: 90%;
+    text-align: center;
+  }
+
+  .book-cell > h4 {
+    margin-top: 8px;
+  }
+
+  .book-cell:nth-child(3n + 1) {
+    border-left: 0px;
+    border-right: 0px;
+  }
+
+  .book-cell:nth-child(3n + 2) {
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+  }
+  
+  .book-cell:nth-child(3n + 3) {
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .book-cell {
+    width: 45%;
+    height: 30rem;
+  }
+
+  .book-cell > p {
+    width: 90%;
+    text-align: center;
+  }
+
+  .book-cell > h4 {
+    margin-top: 8px;
+  }
+
+  .book-cell:nth-child(odd) {
+    border-left: 0px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+  }
+  
+  .book-cell:nth-child(even) {
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .book-cell {
+    width: 100%;
+    height: 100%;
+  }
+
+  .book-cell > p {
+    width: 90%;
+    text-align: center;
+  }
+
+  .book-cell > h4 {
+    margin-top: 8px;
+  }
+  
+  .book-cell:nth-child(n) {
+    border: 0px;
+  }
+}
