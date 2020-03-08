@@ -93,7 +93,7 @@ h4 + p {
 }
 
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   .book-cell {
     width: 30%;
     height: 28rem;
