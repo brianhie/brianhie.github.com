@@ -69,8 +69,6 @@ h4 + p {
 .book-cell:nth-child(4n + 1) {
   border-left: 0px;
   border-right: 0px;
-  border-style: solid;
-  border-color: #cccccc;
 }
 
 .book-cell:nth-child(4n + 2) {
@@ -147,14 +145,15 @@ h4 + p {
 
   .book-cell:nth-child(odd) {
     border-left: 0px;
-    border-right: 1px;
-    border-style: solid;
-    border-color: #cccccc;
+    border-right: 0px;
+
   }
   
   .book-cell:nth-child(even) {
-    border-left: 0px;
+    border-left: 1px;
     border-right: 0px;
+    border-style: solid;
+    border-color: #cccccc;
   }
 }
 
