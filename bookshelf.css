@@ -128,7 +128,7 @@ h4 + p {
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1100px) {
   .book-cell {
     width: 45%;
     height: 30rem;
@@ -157,7 +157,7 @@ h4 + p {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .header-container {
 	font-size: 100px;
   }
