@@ -216,9 +216,9 @@ div.panel.show {
     max-height: 100000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 480px) {
 	.home_title {
-		font-size: 100px;
+		font-size: 115px;
 		margin-bottom: 60px;
 	}
 	
