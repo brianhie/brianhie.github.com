@@ -2,6 +2,14 @@
   color: #F7EE80;
 }
 
+.bookshelf-brian {
+    color: rgb(232, 116, 27);
+    font-weight: 400;
+}
+.bookshelf-brian:hover {
+    text-decoration: none;
+}
+
 .header-container {
   display: flex;
   flex-flow: wrap;
@@ -119,7 +127,7 @@ h4 + p {
     border-style: solid;
     border-color: #cccccc;
   }
-  
+
   .book-cell:nth-child(3n + 3) {
     border-left: 1px;
     border-right: 0px;
@@ -148,7 +156,7 @@ h4 + p {
     border-right: 0px;
 
   }
-  
+
   .book-cell:nth-child(even) {
     border-left: 1px;
     border-right: 0px;
@@ -162,7 +170,7 @@ h4 + p {
 	font-size: 115px;
 	height: 270px;
   }
-  
+
   .book-cell {
     width: 100%;
     height: 100%;
@@ -178,7 +186,7 @@ h4 + p {
     margin-top: 8px;
 	font-size: 32px;
   }
-  
+
   .book-cell:nth-child(n) {
     border: 0px;
   }
