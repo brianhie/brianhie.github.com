@@ -1,5 +1,5 @@
 html {
-    background-color: 
+    background-color:
 }
 
 body {
@@ -11,13 +11,18 @@ b {
 }
 
 a {
-    color: rgb(232, 116, 27);
+    color: #c4266c;
     text-decoration: none;
-	outline: 0;
+    outline: 0;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .pub_link {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 .container {
@@ -35,9 +40,10 @@ a {
 
 .home_title {
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     margin: 80px 0 30px 0;
     color: #000000db;
+    font-weight: 600;
 }
 
 .home_image {
@@ -63,7 +69,8 @@ a {
 }
 
 .title_font {
-    font-family: "Roboto Mono", serif;
+    font-family: "Inconsolata", "Barlow", "Source Sans Pro", sans-serif;
+    /*font-family: "Roboto Mono", serif;*/
 }
 
 .blog_font {
@@ -72,7 +79,7 @@ a {
 }
 
 .sans_font {
-    font-family: "Barlow", "Source Sans Pro", sans-serif;
+    font-family: "Inconsolata", "Barlow", "Source Sans Pro", sans-serif;
     font-weight: 300;
 }
 
@@ -106,18 +113,14 @@ a {
     font-size: 16px;
     margin: 0 0 18px 0;
     line-height: 170%;
-    font-weight: 300;    
+    font-weight: 300;
 }
 
 .home_body {
     font-size: 20px;
     margin: 0 0 30px 0;
-    line-height: 170%;
-    font-weight: 300;    
-}
-
-.home_body a {
-    font-weight: 400;
+    line-height: 148%;
+    font-weight: 300;
 }
 
 .block_quotation {
@@ -216,23 +219,9 @@ div.panel.show {
     max-height: 100000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
-@media screen and (max-device-width: 480px) {
-	.home_title {
-		font-size: 115px;
-		margin-bottom: 60px;
-	}
-	
-	.home_body {
-		font-size: 50px;
-	}
-	
-	.blog_header {
-		font-size: 60px;
-		margin-top: 30px;
-		margin-bottom: 60px;
-	}
-	
-	.blog_body {
-		font-size: 42px;
-	}
+@media (max-device-width: 768px) {
+    body {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
 }
