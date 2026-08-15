@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_blank">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JS8TMD6Z1C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JS8TMD6Z1C');
+    </script>
+
+    <title>Present and future of safe biological AI | Brian Hie</title>
+    <meta name="author" content="Brian Hie">
+    <meta name="description" content="Personal thoughts on the present and future of safe biological AI.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        color-scheme: light;
+        background: #fcfbf8;
+        color: #2d2b29;
+        font-family: "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(100% - 40px, 700px);
+        margin: 0 auto;
+        padding: 88px 0 104px;
+      }
+
+      article {
+        font-size: 1.22rem;
+        font-weight: 400;
+        line-height: 1.68;
+      }
+
+      h1 {
+        max-width: 680px;
+        margin: 0 0 14px;
+        color: #201f1d;
+        font-size: clamp(2.5rem, 7vw, 3.8rem);
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 1.16;
+      }
+
+      .byline {
+        margin: 0 0 52px;
+        color: #595550;
+        font-weight: 400;
+      }
+
+      .byline-separator {
+        display: inline-block;
+        margin: 0 0.55em;
+      }
+
+      p {
+        margin: 0 0 1.65em;
+      }
+
+      a {
+        color: #201f1d;
+        font-weight: 600;
+        text-decoration-color: #85817c;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 0.18em;
+        transition: color 120ms ease, text-decoration-color 120ms ease;
+      }
+
+      a:hover,
+      a:focus-visible {
+        color: #000;
+        text-decoration-color: currentColor;
+      }
+
+      a:focus-visible {
+        border-radius: 2px;
+        outline: 2px solid #c27a4f;
+        outline-offset: 3px;
+      }
+
+      .acknowledgements {
+        margin-top: 3.5rem;
+        color: #2d2b29;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+
+      .archive-note {
+        margin-top: 2rem;
+        color: #2d2b29;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+
+      .archive-note a {
+        color: inherit;
+        font-weight: 400;
+      }
+
+      .archive-note a:hover,
+      .archive-note a:focus-visible {
+        color: inherit;
+      }
+
+      @media (max-width: 600px) {
+        main {
+          width: min(100% - 32px, 700px);
+          padding: 54px 0 72px;
+        }
+
+        article {
+          font-size: 1.12rem;
+          line-height: 1.65;
+        }
+
+        .byline {
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <article>
+        <h1>Present and future of safe biological AI</h1>
+        <p class="byline">By Brian Hie<span class="byline-separator" aria-hidden="true">·</span>August 15, 2026</p>
+
+        <p>Given the public conversation around the generative phage design <a href="https://www.science.org/eprint/6PZWRMXWJCZEYTTFEMQA/full?activationRedirect=/doi/full/10.1126/science.aec2657">paper</a> and in response to several questions I have been receiving, I wanted to provide my personal thoughts on future biosafety and biosecurity implications, not just of the phage work, but of generative genomics and generative biology more broadly. We as researchers do need to be extremely careful and proactive, but I am optimistic that we can steer this technology to maximize human good.</p>
+
+        <p>First, our specific work in designing phages (viruses that infect bacteria) is aimed ultimately at <a href="https://www.youtube.com/watch?v=XTSJ7pxIhMY">preventing the spread</a> of dangerous and evolving bacterial pathogens. AI-guided phage engineering is an active area of research pursued by many <a href="https://gladstone.org/news/gladstone-launches-center-phaige-therapy-harness-ai-fight-against-drug-resistant-infections">academic labs</a> and <a href="https://www.phagos.com/">several</a> <a href="https://www.tabulabio.com/">companies</a>. This line of work is extremely important given the rise of bacterial infections that are resistant to most or all of our antibiotics. The experiments we performed in the paper were also safe and controlled, and while the generated phages had biologically interesting new sequences, structures, and functions (including greater resilience against resistant bacteria), all of the generated phages remain close in sequence space to the design template, wildtype ΦX174 (we did not attempt the design of completely <em>de novo</em> phages). Our paper further lays out detailed thoughts on the biosafety and biosecurity implications of our phage design work in a <a href="https://www.science.org/doi/suppl/10.1126/science.aec2657/suppl_file/science.aec2657_sm.pdf">supplementary discussion</a>. Moreover, obtaining these phages also required substantial time, resources, and a team of multidisciplinary scientific experts spanning machine learning, bioinformatics, and microbiology. Given what we know from this paper, I would assess the current threat of transferring these techniques from phages to the synthesis of pathogenic, highly novel, AI-generated viruses that infect humans to be very low.</p>
+
+        <p>However, the work has generated substantial interest in the press and among the public, not for the current state of capabilities, but for what future capabilities may lie ahead. Our paper represents a real technological milestone in producing the first AI-generated genomes, and genome-scale design unlocks new functions beyond the design of individual genes or molecules. AI for protein and molecular design will <a href="https://www.nobelprize.org/prizes/chemistry/2024/press-release/">continue to revolutionize</a> medicine, sustainability, and many other fields. At the same time, AI-generated biomolecules or AI-guided mutations could aid in causing <a href="https://www.nature.com/articles/d41586-026-01476-x">significant harm to humans</a>. As generative biology advances to the genome-scale and beyond, it is a near certainty that generative models will achieve much more sophisticated applications with the potential for both positive and negative consequences.</p>
+
+        <p>As someone on the frontlines of biological AI development, my view on safety is therefore informed by both current capabilities and the trajectory of progress. While there is no imminent danger from AI-generated human viruses, I also agree that we must undergo urgent preparations for a future in which (alongside any existing or future computational safeguards) we will need to rapidly identify and defend against threats with pandemic potential generated by nature, human researchers, or an AI system. Doing so will include improved <a href="https://screendna.org/">DNA synthesis screening</a>, <a href="https://nextstrain.org/">sequencing-based pathogen surveillance</a>, <a href="https://bondlsc.missouri.edu/2024/07/scientist-sees-legacy-in-search-for-cryptic-covid-19-strain-origin/">intelligent containment strategies</a>, <a href="https://www.interceptfund.com/">broad-spectrum interventions</a>, and targeted interventions, where AI tools will play a major role across all of these.</p>
+
+        <p>To ensure a beneficial future for biological AI, one of the most useful things I can do as a technology developer is to build advanced new tools that can fight and prevent threats with pandemic potential. A core aim of <a href="https://web.archive.org/web/20230722113943/https://evodesign.org/">my research lab from the beginning</a> has been to develop safe biological AI for the good of humanity. A substantial portion of my lab’s ongoing efforts have immediate applications in improving biosafety and biosecurity, including research on models for better responding to both current and future forms of pathogen evolution. This includes better methods for predicting how viral diseases can change and designing therapeutics or vaccines that respond to these changes, for which we have new research that I am excited to share soon.</p>
+
+        <p>As a professional scientist, I do not claim to know the best forms of governance and policy for AI for biology, although there are a few areas in which I do have stronger convictions. First, the current biosafety level (BSL) system, a globally recognized framework for safety and containment practices, does provide a useful existing foundation for future work on AI-generated biology. The BSL system already covers techniques like introducing <a href="https://pubmed.ncbi.nlm.nih.gov/18265275/">random mutations</a> or <a href="https://medicine.yale.edu/news-article/antibiotic-resistance-fighting-a-global-threat-with-phage-hunting-and-more/">environmental sampling</a> that could yield unpredictable functions, and this system could be adapted to consider both the safety and societal consequences of AI-generated sequence changes as well. Moreover, AI models that predict function from sequence could form the basis of rigorous, AI-assisted biosafety assessments that improve the safety profiles of AI-designed sequences compared to previous experimental design methods. Second, I hope the majority of models can continue to be released openly to advance broadly useful and reproducible science. AI models will play a critical role in flagging dangerous new pathogens and in developing new therapeutics and vaccines, and the scientific community should have wide access to these tools. Conversations around limited or closed models in biology for biosecurity reasons should involve many different perspectives, including the model developers themselves. Third, it is essential that regulatory frameworks support rather than inadvertently hinder safety-oriented researchers. A highly restricted ecosystem risks disadvantaging academic labs working on defensive tools, while potentially leaving non-compliant actors unaffected by those same limitations.</p>
+
+        <p>Finally, I want to end on a note of optimism. Unfortunately, it is already relatively easy to design dangerous biological systems without any use of AI (and nature continuously produces new diseases without any human engineering). What humanity cannot do is easily identify and respond to new pandemic-level threats, or to solve its most intractable diseases. I thus continue to maintain that better biological AI should have much greater potential benefits for humanity than risks, and it is why I have personally dedicated myself to the mission of realizing these benefits. We as humans are almost completely helpless in the face of drug-resistant pathogens or metastatic cancers or age-related degeneration. If developed thoughtfully, correctly, and urgently, AI tools for biology will be indispensable to resolving our longstanding fight against human suffering and disease.</p>
+
+        <p class="acknowledgements"><em>I would like to thank Trevor Bedford, Dave Burke, Patrick Collison, Hani Goodarzi, Patrick Hsu, Julia Kazaks, Samuel King, Silvana Konermann, David Li, Usman Muzaffar, Jeremy Ratcliff, Ivan Specht, and Alden Woodrow for feedback on this document, though the views here are my own.</em></p>
+
+        <p class="archive-note">A version of this document has been archived at <a href="https://doi.org/10.5281/zenodo.21950737">DOI:10.5281/zenodo.21950737</a>.</p>
+      </article>
+    </main>
+  </body>
+</html>
